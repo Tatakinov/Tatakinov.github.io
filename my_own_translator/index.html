@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../style.css" rel="stylesheet" />
+    <title>How to use my_own_translator</title>
+  </head>
+  <body>
+    <h2>Getting started</h2>
+    <p>In case of translating Japanese to English:</p>
+    <ul>
+        <li>Visit <a href="https://mozilla.github.io/translations/">mozilla/translations</a></li>
+        <li>Click "Model Registry"</li>
+        <img src="./01.png" /><br>
+        <li>Enter "ja-en" to inputbox</li>
+        <img src="./02.png" /><br>
+        <li>Once the filtered results are displayed, click "Show" button</li>
+        <img src="./03.png" /><br>
+        <li>Click on the number "Exported" (larger number, better)</li>
+        <img src="./04.png" /><br>
+        <li>
+            Download 3 file(lex.*.bin.gz, model.*.bin.gz, vocab.*.spm.gz)<br>
+            <strong>If srcvocab.*.spm.gz and trgvocab.*.spm.gz exist instead of vocab.*.spm.gz, download srcvocab.*.spm.gz and trgvocab.*.spm.gz</strong>
+        </li>
+        <img src="./05.png" /><br>
+        <li>Extract *.gz</li>
+        <img src="./06.png" /><br>
+        <li>
+            Copy lex.*.bin, model.*.bin and vocab.*.spm to "/path/to/ssp/ghost/my_own_translator/ghost/master/models/ja-en"<br>
+            <strong>in this case, both src.spm and trg.spm is same file, but  both are required</strong><br>
+            <strong>if you download srcvocab.*.spm.gz and trgvocab.*.spm.gz, copy them to the directory, and rename them to src.spm and trg.spm respectively</strong>
+        </li>
+        <img src="./07.png" /><br>
+        <li>Copy config.yml to the directory. Do not move it.</li>
+        <img src="./08.png" /><br>
+    </ul>
+    <h2>Note</h2>
+    <p>
+        This ghost uses local translation since v2.0.0, therefore accuracy of translation is worse than general translation (e.g. google translate, DeepL)
+        <br>
+        latest version available at <a href="./mosu.nar">Release</a><br>
+    </p>
+  </body>
+</html>
